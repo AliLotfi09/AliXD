@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+
+  <link rel="icon" type="image/svg+xml" href="/AliXD/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite App</title>
+
+  <link rel="icon" type="image/svg+xml" href="/AliXD/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hi Im Ali XD</title>
+  <style>
+    body,
+    html {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 100;
+      background-color: rgba(0, 208, 255, 1);
+      background-image: radial-gradient(at 5% 56%, rgba(255, 0, 4, 1) 0%, transparent 50%), radial-gradient(at 15% 49%, rgba(255, 208, 0, 1) 0%, transparent 50%), radial-gradient(at 39% 65%, rgba(255, 0, 4, 1) 0%, transparent 50%), radial-gradient(at 63% 58%, rgba(255, 208, 0, 1) 0%, transparent 50%), radial-gradient(at 72% 50%, rgba(255, 208, 0, 1) 0%, transparent 50%), radial-gradient(at 76% 71%, rgba(255, 0, 4, 1) 0%, transparent 50%), radial-gradient(at 86% 8%, rgba(0, 13, 56, 1) 0%, transparent 50%), radial-gradient(at 41% 1%, rgba(0, 136, 255, 1) 0%, transparent 50%), radial-gradient(at 5% 92%, rgba(0, 13, 56, 1) 0%, transparent 50%), radial-gradient(at 91% 90%, rgba(0, 13, 56, 1) 0%, transparent 50%);
+    }
+
+    @keyframes spinner {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .spinner {
+      position: relative;
+      width: 48px;
+      height: 48px;
+    }
+
+    .spinner::before {
+      content: '';
+      box-sizing: border-box;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 48px;
+      height: 48px;
+      margin-top: -24px;
+      margin-left: -24px;
+      border-radius: 50%;
+      border: 4px solid white;
+      border-top-color: rgba(0, 0, 0, 0.25);
+      animation: spinner .6s linear infinite;
+    }
+
+    .fade-out {
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+
+    #black-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 99;
+      width: 100%;
+      height: 100%;
+      background: black;
+      opacity: 1;
+      pointer-events: none;
+      transition: opacity 3s ease;
+    }
+  </style>
+  <script type="module" crossorigin src="/AliXD/assets/index-CFlkbOKD.js"></script>
+  <link rel="stylesheet" crossorigin href="/AliXD/assets/index-CSSjky8V.css">
+</head>
+
+<body>
+  <section>
+    <span class="spinner"></span>
+  </section>
+  <div id="black-overlay"></div>
+
+  <header class="flex flex-row justify-center">
+    <nav
+      class="fixed w-[60%] top-[32px] w-full z-50 backdrop-blur-lg bg-white/10 border-b border-[#726E6E]/20 px-8 py-4 flex justify-between items-center rounded-full">
+      <ul class="flex gap-6 text-white">
+        <li><a href="#about">درباره</a></li>
+        <li><a href="#services">خدمات</a></li>
+        <li><a href="#contact">تماس</a></li>
+      </ul>
+      <h1 class="text-white text-2xl">سیاره سوم</h1>
+    </nav>
+  </header>
+  <h1 class="text-white text-2xl absolute text-center bottom-42 w-full">وب‌سایت‌هایی با نفسِ فضایی</h1>
+  <canvas id="canvas"></canvas>
+  <canvas id="canvas"></canvas>
+
+</body>
+
+</html>
